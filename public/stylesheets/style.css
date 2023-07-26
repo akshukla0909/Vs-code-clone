@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+  height: 100vh;
+  width: 100%;
+  /* background-color: rgb(244, 219, 219); */
+}
+#main   #nav-t{
+  height: 6vh;
+  width: 100%;
+  background-color: #dcdcdd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav-t .left{
+  display: flex;
+  align-items: center;
+  
+}
+#nav-t .left img{
+  height: 22px;
+  padding: 0px 8px;
+}
+#nav-t .left a{
+  padding: 2px 10px;
+  color: black;
+  margin-left: 1px;
+  transition: all ease .2s;
+  border-radius: 4px;
+}
+#nav-t .left a:hover{
+  background-color: #c5c5c6b8;
+
+}
+#nav-t .mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  text-align: center;
+}
+#nav-t .mid i{
+  font-size: 18px;
+  color: #7e7e7e;
+  margin-right: 10px;
+}
+.search-b{
+  width: 500px;
+}
+#nav-t .mid input{
+  height: 22px;
+  outline: none;
+  width: 500px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #dcdcdd;
+  border: .5px #a5a5a5 solid;
+}
+#nav-t .ri-subtract-line:hover{
+  background-color: #c5c5c6;
+}
+#nav-t .ri-checkbox-multiple-blank-line:hover{
+  background-color: #c5c5c6;
+}
+#nav-t .ri-close-line:hover{
+  background-color: red;
+
+}
+#nav-t .right i{
+  padding: 12px 12px;
+  font-size: 16px;
+  /* margin-right: 1px; */
+}
+#nav-b{
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+}
+#nav-b #left{
+  display: flex;
+  height: calc(100vh - 6vh);
+  width: 20%;
+  background-color: #f3f3f3;
+}
+#nav-b #right{
+  height: calc(100vh - 6vh);
+  width: 80%;
+  background-color: #fff;
+}
+.col-icon{
+  width: 14%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d2c2d;
+}
+.col-icon i{
+  font-size: 22px;
+  padding: 4px 6px;
+  transition: all ease .2s;
+  cursor: pointer;
+  color: #6f8699;
+  margin: 4px 0 ;
+}
+.col-icon i:hover{
+  color: #fff;
+
+}
+#left .row-icon{
+  width: 86%;
+  height: 100%;
+  /* background-color: #da3b3b33; */
+}
+.row-icon .top-r{
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  text-transform: uppercase;
+  background-color: #f3f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+.row-icon .top-r span:first-child{
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.code-folder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  background-color: #DDDDDC;
+  font-size: 14px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+.code-folder .icons-l{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.code-folder .icons-l span{
+  font-size: 12px;
+}
+.code-folder .icons i{
+  padding: 0 2px;
+}
+
+#files{
+  padding: 10px 20px;
+}
+#files .elem{
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+  padding-top: 10px;
+  /* margin-bottom: 15px; */
+  /* display: flex; */
+  /* gap: 10px; */
+}
+.elem .eright i{
+  opacity: 0;
+}
+.elem:hover i{
+  cursor: pointer;
+  opacity: 1;
+}
+#files form{
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#files form input{
+  font-weight: 600;
+  width: 70%;
+  padding: 6px 10px;
+  border-radius: 5px;
+  outline-color: royalblue;
+  border: 2px solid #f3f3f3;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.rnav{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  
+}
+
+#right .file{
+  height: 30px;
+  width: fit-content;
+  background: rgb(233, 224, 238);
+  padding: 4px 5px;
+  border-radius: 2px;
+  color: black;
+}
+form{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+textarea{
+  resize: none;
+  width: 100%;
+  height: calc(100% - 30px);
+  border: none;
+  background-color: transparent;
+}
+#submitbtn{
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  padding: 10px 15px;
+  padding: 6px 15px;
+}

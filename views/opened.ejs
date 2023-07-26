@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vs code</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <div id="main">
+    <div id="nav-t">
+      <div class="left">
+        <img src="../images/png-transparent-visual-studio-code-hd-logo-thumbnail-removebg-preview.png" alt="">
+         <a href="#">File</a>
+         <a href="#">Edit</a>
+         <a href="#">Selection</a>
+         <a href="#">View</a>
+         <a href="#">Go</a>
+         <a href="#"><i class="ri-more-line"></i></a>
+      </div>
+      <div class="mid">
+        <i class="ri-arrow-left-line"></i>
+        <i class="ri-arrow-right-line"></i>
+        <div class="search-b"> <input type="search" placeholder="vscode"></div>
+      </div>
+      <div class="right">
+        <i class="ri-subtract-line"></i>
+        <i class="ri-checkbox-multiple-blank-line"></i>
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+    <div id="nav-b">
+      <div id="left">
+        <div class="col-icon">
+          <i class="ri-file-copy-line" id="icon-l"></i>
+          <i class="ri-search-line" id="icon-l"></i>
+          <i class="ri-git-branch-line" id="icon-l"></i>
+          <i class="ri-bug-line" id="icon-l"></i>
+          <i class="ri-instance-line" id="icon-l"></i>
+          <i class="ri-store-line" id="icon-l"></i>
+        </div>
+        <div class="row-icon folder">
+          <div class="top-r">
+            <span>Explorer</span>
+            <span><i class="ri-more-line"></i></span>
+          </div>  
+          <div class="code-folder">
+              <div class="icons-l">
+                <i class="ri-arrow-down-s-line"></i>
+                  <span>Create File/Folder</span>
+              </div>
+             <div class="icons" >
+              <i id="fileicon" class="ri-file-line"></i>
+              <i id="foldericon" class="ri-folder-2-line"></i>
+              <i id="refresh" class="ri-restart-line"></i>
+             </div>
+          </div>
+          <div id="files">
+            <form id="fileform" action="/createFile" method="get">
+              <input type="text" name="fileName" placeholder="fileName">
+            </form>
+            <form id="folderform" action="/createFolder" method="get">
+              <input type="text" name="folderName" placeholder="folderName">
+            </form>
+
+
+            <% elem.forEach(function(el){ %>
+              <div class="elem">
+                <div class="eleft">
+                  <% if(el.isDirectory()){ %>
+                    <i class="ri-folder-line"></i>
+                    <%= el.name %>
+                  <% } else { %>
+                  
+                    <a href="/file/<%= el.name %>">
+                    <i class="ri-file-3-line"></i>
+                <%= el.name %>
+              </a>
+                  <% } %>
+                 
+                </div>
+
+                <div class="eright">
+                  <i class="ri-pencil-fill"></i>
+                  <% if(el.isDirectory()){ %>
+                    <a href="/delete/folder/<%= el.name %>"><i class="ri-delete-bin-7-line"></i></a>
+
+                  <% } else { %>
+                 <a href="/delete/file/<%= el.name %>"><i class="ri-delete-bin-7-line"></i></a>
+                  <% } %>
+                </div>
+              </div>
+           <% }) %>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="rnav">
+            <div class="file">index.html <i class="ri-close-line"></i></div>
+          </div>
+          <form action="">
+            <textarea ></textarea>
+            <input type="submit" id="submitbtn" value="save" >
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../javascripts/script.js"></script>
+</body>
+</html>
